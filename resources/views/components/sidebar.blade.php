@@ -50,10 +50,10 @@
 
         <div class="space-y-1">
 
-            <a href="{{ route('admin.dashboard') }}"
-                class="{{ $baseLink }} {{ request()->routeIs('admin.dashboard') ? $active : $inactive }}">
-                <i class="fas fa-gauge-high w-4 text-center"></i>
-                Dashboard Admin
+            <a href="{{ route('polis.index') }}"
+                class="{{ $baseLink }} {{ request()->routeIs('polis.*') ? $active : $inactive }}">
+                <i class="fas fa-hospital w-4 text-center"></i>
+                Manajemen Poli
             </a>
 
         </div>
