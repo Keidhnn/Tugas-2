@@ -56,6 +56,13 @@
                 Manajemen Poli
             </a>
 
+            {{-- Menu Manajemen Obat yang ditambahkan --}}
+            <a href="{{ route('obat.index') }}"
+                class="{{ $baseLink }} {{ request()->routeIs('obat.*') ? $active : $inactive }}">
+                <i class="fas fa-pills w-4 text-center"></i>
+                Manajemen Obat
+            </a>
+
         </div>
         @endif
 
@@ -69,12 +76,12 @@
 
         <div class="space-y-1">
 
-            <a href="{{ route('pasien.dashboard') }}"
-                class="{{ $baseLink }} {{ request()->routeIs('pasien.dashboard') ? $active : $inactive }}">
-                <i class="fas fa-house-medical w-4 text-center"></i>
-                Dashboard Pasien
+            <a href="{{ route('pasien.index') }}"
+               class="{{ $baseLink }} {{ request()->routeIs('pasien.*') ? $active : $inactive }}">
+               <i class="fas fa-bed-pulse w-4 text-center"></i>
+             Manajemen Pasien
+             
             </a>
-
 
         </div>
         @endif
@@ -89,11 +96,11 @@
 
         <div class="space-y-1">
 
-            <a href="{{ route('dokter.dashboard') }}"
-                class="{{ $baseLink }} {{ request()->routeIs('dokter.dashboard') ? $active : $inactive }}">
-                <i class="fas fa-stethoscope w-4 text-center"></i>
-                Dashboard Dokter
-            </a>
+         <a href="{{ route('dokter.index') }}"
+             class="{{ $baseLink }} {{ request()->routeIs('dokter.*') ? $active : $inactive }}">
+            <i class="fas fa-user-doctor w-4 text-center"></i>
+            Manajemen Dokter
+         </a>
 
         </div>
         @endif
